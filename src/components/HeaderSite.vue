@@ -15,7 +15,7 @@
             <a href="tel:+1234567890" class="phone-number">+1 (234) 567-890</a>
           </div>
           <div class="social-links">
-            <a href="https://t.me/yourTelegramUsername" target="_blank" class="telegram-icon">
+            <a href="https://t.me/NadStepanova" target="_blank" class="telegram-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="12" fill="#0088cc"/>
                   <path d="M17.55 6.45C17.85 6.3 18.15 6.6 18.05 6.95L15.75 15.45C15.65 15.8 15.3 15.9 15.05 15.75L12.55 14.05L11.45 15.05C11.35 15.15 11.2 15.25 11 15.2L11.1 12.65L15.6 8.9C15.8 8.75 15.6 8.5 15.35 8.65L9.1 12.15L6.7 11.35C6.35 11.25 6.35 10.8 6.75 10.7L17.55 6.45Z" fill="white"/>
@@ -23,7 +23,7 @@
               </a>
           </div><p></p><div class="social-links">
             
-            <a href="https://wa.me/71234567890" target="_blank" class="whatsapp-icon">
+            <a href="https://wa.me/+79247399101" target="_blank" class="whatsapp-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="12" fill="#25D366"/>
                   <path d="M16.22 14.28c-.27-.13-1.6-.79-1.84-.88-.24-.09-.41-.13-.58.13-.17.27-.67.88-.82 1.06-.15.18-.3.2-.57.07-.27-.13-1.12-.41-2.13-1.3-.79-.7-1.32-1.57-1.48-1.83-.15-.27-.02-.42.11-.55.11-.11.27-.3.4-.45.13-.15.18-.24.27-.4.09-.18.04-.32-.02-.45-.07-.13-.58-1.42-.8-1.97-.21-.55-.43-.47-.58-.47-.15 0-.32-.02-.5-.02-.18 0-.46.07-.7.34-.24.27-.91.89-.91 2.2 0 1.3.94 2.56 1.07 2.74.13.18 1.85 2.96 4.5 3.94.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 1.6-.65 1.82-1.27.22-.63.22-1.17.15-1.27-.08-.09-.23-.15-.5-.27z" fill="white"/>
@@ -160,10 +160,38 @@
 
   }
   
+  /* Адаптивный стиль для мобильных устройств */
   @media (max-width: 768px) {
     .header-content {
       flex-direction: column;
       align-items: center;
+      margin-top: 15px;
+    }
+  
+    .logo {
+      text-align: center;
+    }
+    .logo img{
+      display: none;
+    }
+  
+    .contact-info {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 15px;
+    }
+  
+    .manager-photo {
+      display: none;
+    }
+  
+    .phone-contact {
+      margin-right: 10px;
+    }
+  
+    .social-links {
+      display: flex;
+      gap: 1px;
     }
   
     .navigation ul {
@@ -174,13 +202,8 @@
     .navigation li {
       margin: 5px 0;
     }
-  
-    .contact-info {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10px;
-    }
   }
+  
   </style>
 
   

@@ -145,9 +145,14 @@
   }
   
   .product-description {
-    font-size: 1.2em;
+    
     margin-bottom: 1em;
     color: #555;
+    text-align: justify;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      
+    
   }
   
   .download-link {
@@ -352,6 +357,19 @@
   .discounts-list li {
     margin-bottom: 5px;
     font-weight: 500;
+  }
+
+  @media (max-width: 480px) {
+    .content-section {
+      flex-direction: column; /* Меняем направление на колонку */
+    }
+  
+    
+    .info-section,
+    .calculator-section {
+      width: 100%; /* Делаем блоки на всю ширину */
+      margin-bottom: 15px; /* Добавляем отступ снизу */
+    }
   }
   
   
