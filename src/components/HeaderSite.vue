@@ -176,9 +176,7 @@
     }
   
     .contact-info {
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 15px;
+      display: none;
     }
   
     .manager-photo {

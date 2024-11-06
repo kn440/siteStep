@@ -361,7 +361,16 @@
 
   @media (max-width: 480px) {
     .content-section {
+      margin: 0 auto; /* Центрирует блок по горизонтали */
+  padding: 0;
       flex-direction: column; /* Меняем направление на колонку */
+    }
+    .info-section {
+      
+      background: #f9f9f9; /* Светлый фон */
+      padding: 20px; /* Отступы внутри колонок */
+      border-radius: none; /* Сглаженные углы */
+      box-shadow: none; /* Тень для отделения от фона */
     }
   
     

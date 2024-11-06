@@ -83,7 +83,12 @@
     line-height: 1.6;
     
   }
-
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  .main_class{
+    display: none;
+  }
+}
   
   </style>
   
