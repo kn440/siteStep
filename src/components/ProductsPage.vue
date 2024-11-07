@@ -4,9 +4,11 @@
       <div class="product-header">
         <h1>{{ product.name }}</h1>
         <p class="product-description">{{ product.description }}</p>
-        <a :href="product.certificateUrl" class="download-link" download>Скачать сертификат</a>
-      </div>
-  
+        
+      <a :href="product.certificateUrl" class="download-link" download="certificate.jpeg">
+        Скачать сертификат
+      </a>
+    </div>
       <div class="content-section">
         <!-- Левая колонка: Минимальная покупка и информация о скидках и доставке -->
         <div class="info-section">
@@ -65,9 +67,9 @@
     data() {
       return {
         product: {
-          name: 'Незамерзающая жидкость SuperFreeze',
+          name: 'Незамерзающая жидкость  Nord Ultra',
           description: 'Высококачественная незамерзающая жидкость для автомобилей, предназначенная для использования при низких температурах до -30 по Цельсию. Обладает отличными моющими свойствами и обеспечивает безопасное использование. Продукция разлита в 5 литровые бутыли (4,85 литра)',
-          certificateUrl: '/path/to/certificate.pdf',
+          certificateUrl: require('@/assets/certificate.jpeg'),
          
          
         },
