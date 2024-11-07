@@ -4,8 +4,9 @@
         <div class="logo">
           <img src="@/assets/img/logo.svg" alt="Незамерзайка" />
           <div class="site-info">
-            <span class="site-title">Продажа незамерзающей жидкости</span>
+            <span class="site-title">Продажа незамерзающей жидкости </span>
             <span class="site-subtitle">Сертифицированный продукт высокого качества</span>
+            <span class="site-subtitle">город Одинцово</span>
           </div>
         </div>
         
@@ -15,7 +16,7 @@
             <a href="tel:+79057007039" class="phone-number">+7 (905) 700-70-39</a>
           </div>
           <div class="social-links">
-            <a href="https://t.me/NadStepanova" target="_blank" class="telegram-icon">
+            <a href="https://t.me/Chugundyrka" target="_blank" class="telegram-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="12" fill="#0088cc"/>
                   <path d="M17.55 6.45C17.85 6.3 18.15 6.6 18.05 6.95L15.75 15.45C15.65 15.8 15.3 15.9 15.05 15.75L12.55 14.05L11.45 15.05C11.35 15.15 11.2 15.25 11 15.2L11.1 12.65L15.6 8.9C15.8 8.75 15.6 8.5 15.35 8.65L9.1 12.15L6.7 11.35C6.35 11.25 6.35 10.8 6.75 10.7L17.55 6.45Z" fill="white"/>

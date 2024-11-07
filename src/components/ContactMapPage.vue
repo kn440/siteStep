@@ -8,9 +8,9 @@
         <span>{{ manager.description }}</span>
   
         <div class="contact-details">
-            <p><strong>Телефон:</strong> {{ manager.phone }}</p>
+          <p><strong>Телефон:</strong> <a :href="`tel:${manager.phone}`">{{ manager.phone }}</a></p>
             <p><strong>Почта:</strong> <a :href="`mailto:${manager.email}`">{{ manager.email }}</a></p>
-            <a href="https://t.me/NadStepanova" target="_blank" style="text-decoration: none;">
+            <a href="https://t.me/Chugundyrka" target="_blank" style="text-decoration: none;">
                 <button style="padding: 10px 20px; background-color: #0088cc; color: white; border: none; border-radius: 5px; cursor: pointer;">
                     Написать в Telegram
                 </button>
@@ -41,11 +41,11 @@
     data() {
       return {
         manager: {
-          name: 'Иван Иванов',
+          name: 'Степанов Степан',
           photo: require('@/assets/img/photo_manager.jpg'),
           description: 'Профессиональный менеджер с более чем 12-летним опытом в сфере продаж.',
           phone: '+7 (905) 700-70-39',
-        email: 'ivan.ivanov@example.com',
+        email: 'steeepan@mail.ru',
         },
         map: null,
         

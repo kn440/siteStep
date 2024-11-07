@@ -29,6 +29,21 @@ export default {
     SpacerComponent,
     
   },
+  metaInfo() {
+    return {
+      title: 'Незамерзайка в Одинцово - Купить автохимию',
+      meta: [
+        {
+          name: 'description',
+          content: 'Купить незамерзайку в Одинцово. Доставка по Одинцово и МО.'
+        },
+        {
+          name: 'keywords',
+          content: 'незамерзайка, Одинцово, автохимия, доставка, Доставка по Одинцово и МО, зимняя жидкость, антифриз, жидкость для стеклоомывателя, зимняя автохимия, автохимия Одинцово, покупка незамерзайки, незамерзающая жидкость, зимняя антифриз жидкость, автохимия для зимы, зимняя жидкость для автомобиля, незамерзайка для стеклоомывателя, зимний автохимический состав, автохимия для холодной погоды, зимняя жидкость для охлаждения, качественная незамерзайка,недорогая автохимия в Одинцово, antifreeze, car antifreeze, winter antifreeze, antifreeze fluid, auto antifreeze, car windshield fluid, winter windshield fluid, antifreeze for cars, coolant antifreeze, automotive antifreeze, antifreeze for winter, best antifreeze, antifreeze liquid, antifreeze 50/50, antifreeze store, antifreeze in Odenzovo,buy antifreeze online, antifreeze for windshield wipers, antifreeze for engine cooling'
+        }
+      ]
+    };
+  }
 };
 </script>
 <style lang="scss">
