@@ -14,20 +14,21 @@
           <div class="info-content">
             <div class="purchase">
               <p><strong>Минимальная покупка:</strong></p>
-              <p>4 бутыли,</p> <p> <strong>стоимость:</strong> 796 руб. (199 руб. за одну штуку)</p>
+              <ul >
+                <li>4 бутыли — 796 руб. (199 руб. за одну штуку)</li></ul>
             </div>
             <div class="discounts-section">
-                <h3 class="discounts-title">Скидки:</h3>
-                <ul class="discounts-list">
+              <p><strong>Скидки:</strong></p>
+                <ul >
                   <li>от 10 бутылей — 1400 руб. (140 руб. за одну штуку)</li>
                   <li>от 50 бутылей — 6750 руб. (135 руб. за одну штуку)</li>
                 </ul>
               </div>
             <div class="discounts">
-              <strong>Варианты доставки:</strong>
+              <p><strong>Варианты доставки:</strong></p>
               <ul>
                 <li>Самовывоз — бесплатно</li>
-                <li>Доставка в черте города Одинцово — 300 руб.</li>
+                <li>Доставка в черте города Одинцово — <strong>300 руб.</strong></li>
                 <li>Доставка за городом — 25 руб./км</li>
               </ul>
             </div>
@@ -67,11 +68,7 @@
           name: 'Незамерзающая жидкость SuperFreeze',
           description: 'Высококачественная незамерзающая жидкость для автомобилей, предназначенная для использования при низких температурах до -30 по Цельсию. Обладает отличными моющими свойствами и обеспечивает безопасное использование. Продукция разлита в 5 литровые бутыли (4,85 литра)',
           certificateUrl: '/path/to/certificate.pdf',
-          purchaseOptions: [
-            { id: 1, amount: 4, price: 796, one: 199 },
-            { id: 2, amount: 10, price: 1400, one: 140 },
-            { id: 3, amount: 50, price: 6750, one: 135 },
-          ],
+         
          
         },
         quantity: 4,
@@ -110,7 +107,7 @@
     if (this.distance <= 1) {
       this.deliveryCost = 300; // Доставка до 10 км
     } else {
-      this.deliveryCost = 300 + (this.distance - 10) * 25; // Доставка свыше 10 км
+      this.deliveryCost = 300 + (this.distance - 1) * 25; // Доставка свыше 10 км
     }
 
     this.totalCost = this.productCost + this.deliveryCost; // Общая стоимость
@@ -194,61 +191,56 @@
     gap: 5px; /* Расстояние между элементами */
   }
   
-  
-
-  .discounts {
-    background-color: #e6ffe6; /* Светло-зелёный фон */
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #66cc66; /* Насыщенный зелёный ободок */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 10px auto;
-  }
-  
-  .discounts strong {
-    font-size: 1.2rem;
-    color: #4d8f4d; /* Темный оттенок для текста заголовка */
-  }
-  
-  .discounts ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #4d8f4d; /* Темный зеленый для текста списка */
-  }
-  
-  .discounts li {
-    margin-bottom: 8px;
-  }
-  
-
-  .purchase {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffe6e6;
-    border: 2px solid #ffcccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1em;
-    color: #333;
-    text-align: center;
-  }
-  
-  .purchase strong {
-    display: block;
-    font-size: 1.2em;
-    color: #e67300;
-    font-weight: bold;
-  }
-  
-  .purchase p {
-    font-size: 1.1em;
-    color: #444;
-    margin: 0;
-  }
-  
  
+/* Общие настройки блоков */
+.discounts,
+.purchase,
+.discounts-section {
+    font-family: Arial, sans-serif; /* Единый шрифт для всех блоков */
+    font-size: 1em; /* Размер шрифта */
+    max-width: 400px;
+    margin: 10px auto; /* Одинаковый отступ сверху и снизу */
+    padding: 15px; /* Одинаковый отступ внутри блоков */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Выравнивание содержимого по левой стороне */
+}
+
+/* Индивидуальные цвета блоков */
+.discounts {
+    background-color: #e6ffe6; /* Светло-зелёный фон */
+    border: 2px solid #66cc66; /* Насыщенный зелёный ободок */
+    color: #2e7d32; /* Темный зеленый для текста */
+}
+
+.purchase {
+    background-color: #ffe6e6; /* Светло-розовый фон */
+    border: 2px solid #ff9999; /* Темный, но мягкий красный ободок */
+    color: #993333; /* Темный текст */
+}
+
+.discounts-section {
+    background-color: #fff9e6; /* Светлый желтоватый фон */
+    border: 2px solid #ffd966; /* Светло-желтый ободок */
+    color: #5c4033; /* Темный текст */
+}
+
+/* Настройки для списков */
+.discounts ul,
+.purchase ul,
+.discounts-section ul {
+    margin: 10px 0 0 20px; /* Отступы: сверху 10px, слева 20px */
+    padding: 5px;
+    list-style-type: disc; /* Маркер — точки */
+    font-size: 1em; /* Размер шрифта */
+}
+
+.discounts li,
+.purchase li,
+.discounts-section li {
+    margin-bottom: 8px;
+}
+
 
   
   
@@ -328,56 +320,30 @@
     margin-top: 15px;
     color: #222;
   }
-  .discounts-section {
-    background-color: #fff9e6; /* Светлый желтоватый фон */
-    border: 2px solid #ffd966;;
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0px auto; /* Центрирование блока */
-  }
+ 
   
-  .discounts-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    
-    text-align: center;
-  }
-  
-  .discounts-list {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  .discounts-list li {
-    margin-bottom: 5px;
-    font-weight: 500;
-  }
+ 
 
   @media (max-width: 480px) {
+    
+
     .content-section {
-      margin: 0 auto; /* Центрирует блок по горизонтали */
-  padding: 0;
+      display: flex;
+      justify-content: space-between;
       flex-direction: column; /* Меняем направление на колонку */
+      align-items: flex-start; /* Выровнять блоки по верхнему краю */
+      gap: 20px;
+      margin: 20px 0;
     }
-    .info-section {
-      
-      background: #f9f9f9; /* Светлый фон */
-      padding: 20px; /* Отступы внутри колонок */
-      border-radius: none; /* Сглаженные углы */
-      box-shadow: none; /* Тень для отделения от фона */
-    }
-  
     
     .info-section,
     .calculator-section {
-      width: 100%; /* Делаем блоки на всю ширину */
-      margin-bottom: 15px; /* Добавляем отступ снизу */
+      flex: 1; /* Одинаковая ширина для колонок */
+      padding: 20px; /* Отступы внутри колонок */
+      max-width: 400px; /* Ограничение ширины */
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
   }
   

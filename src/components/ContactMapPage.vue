@@ -16,7 +16,7 @@
                 </button>
             </a>
             <p></p>
-            <a href="https://wa.me/+79247399101" target="_blank" style="text-decoration: none;">
+            <a href="https://wa.me/+79057007039" target="_blank" style="text-decoration: none;">
                 <button style="padding: 10px 20px; background-color: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer;">
                     Написать в WhatsApp
                 </button>
@@ -44,7 +44,7 @@
           name: 'Иван Иванов',
           photo: require('@/assets/img/photo_manager.jpg'),
           description: 'Профессиональный менеджер с более чем 12-летним опытом в сфере продаж.',
-          phone: '+7 (123) 456-78-90',
+          phone: '+7 (905) 700-70-39',
         email: 'ivan.ivanov@example.com',
         },
         map: null,
