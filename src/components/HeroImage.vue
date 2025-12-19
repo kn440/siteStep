@@ -1,8 +1,13 @@
 <template>
-    <div class="main_class">
+  <div class="main_class" v-if="showHero">
     <section class="hero-image">
       <div class="hero-image-container">
-        <img src="@/assets/img/photo_main.jpg" alt="Изображение незамерзайки" class="hero-image" />
+        <img 
+          :src="heroSrc" 
+          alt="Изображение незамерзайки" 
+          class="hero-image" 
+          loading="lazy"
+        />
       </div>
       <div class="hero-content">
         <h1 class="slogan">Мы продаем только то, что сами используем</h1>
@@ -10,14 +15,28 @@
           Предлагаемая продукция сертифицирована и заслужила высокую оценку среди наших покупателей.
         </p>
       </div>
-    </section></div>
-  </template>
-  
-  <script>
-  export default {
-    name: "HeroImage"
-  };
-  </script>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HeroImage",
+  data() {
+    return {
+      showHero: false,
+      heroSrc: require('@/assets/img/photo_main.webp') // WebP для быстрого отображения
+    };
+  },
+  mounted() {
+    // Проверяем ширину экрана
+    if (window.innerWidth > 480) {
+      this.showHero = true;
+    }
+  }
+};
+</script>
+
   
   <style scoped>
 .main_class{

@@ -15,8 +15,11 @@ import FooterSite from './components/FooterSite.vue';
 import HeaderSite from './components/HeaderSite.vue';
 
 import HeroImage from './components/HeroImage.vue';
-import ProductsPage from './components/ProductsPage.vue';
-import ContactMapPage from './components/ContactMapPage.vue';
+const ProductsPage = () => import('./components/ProductsPage.vue');
+
+//import ProductsPage from './components/ProductsPage.vue';
+const ContactMapPage = () => import('./components/ContactMapPage.vue');
+//import ContactMapPage from './components/ContactMapPage.vue';
 import SpacerComponent from './components/SpacerComponent.vue';
 
 export default {

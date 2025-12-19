@@ -22,8 +22,9 @@
             <div class="discounts-section">
               <p><strong>Скидки:</strong></p>
                 <ul >
-                  <li>от 10 бутылей — 1400 руб. (140 руб. за одну штуку)</li>
-                  <li>от 50 бутылей — 6750 руб. (135 руб. за одну штуку)</li>
+                  <li>от 10 бутылей — 1500 руб. (150 руб. за одну штуку)</li>
+                  <li>от 50 бутылей — 7000 руб. (140 руб. за одну штуку)</li>
+                  <li>от 100 бутылей — 12000 руб. (120 руб. за одну штуку)</li>
                 </ul>
               </div>
             <div class="discounts">
@@ -86,23 +87,26 @@
     },
     methods: {
       
-        calculateCost() {
-            let costPerBottle;
-    
-            if (this.quantity < 4) {
-          // Если количество меньше 4, то стоимость 0 или сообщение об ошибке
-          return 0; // Или можно показать сообщение о минимальной покупке
-            } else if (this.quantity >= 4 && this.quantity < 10) {
-          costPerBottle = 199; // Цена за бутылку от 4 до 10
-            } else if (this.quantity >= 10 && this.quantity < 50) {
-              costPerBottle = 140; // Цена за бутылку от 10 до 50
-            } else {
-              costPerBottle = 135; // Цена за бутылку больше 50
-            }
+       calculateCost() {
+  let costPerBottle;
 
-            this.productCost = this.quantity * costPerBottle; // Расчет общей стоимости
-            this.calculateDeliveryCost(); // Вызываем метод для расчета стоимости доставки
-        },
+  if (this.quantity < 4) {
+    // Меньше 4 бутылок — нельзя купить
+    return 0;
+  } else if (this.quantity >= 4 && this.quantity < 10) {
+    costPerBottle = 199; // 4–9 бутылок
+  } else if (this.quantity >= 10 && this.quantity < 50) {
+    costPerBottle = 150; // 10–49 бутылок
+  } else if (this.quantity >= 50 && this.quantity < 100) {
+    costPerBottle = 140; // 50–99 бутылок
+  } else {
+    costPerBottle = 120; // 100 и больше
+  }
+
+  this.productCost = this.quantity * costPerBottle;
+  this.calculateDeliveryCost(); // Расчет доставки
+},
+
 
   calculateDeliveryCost() {
     // Примерный расчет стоимости доставки
